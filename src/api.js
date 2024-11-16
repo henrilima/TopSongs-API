@@ -118,7 +118,7 @@ router.get("/albums", async (req, res) => {
         res.status(200).json(albunsData); // Retornando os dados recebidos da API do Deezer
     } catch (error) {
         console.error("Erro ao buscar dados do Deezer:", error);
-        res.status(500).json({ error: "Erro ao buscar dados do Deezer." });
+        res.status(500).json({ error: "Erro ao buscar dados do Deezer.", message: error });
     }
 });
 
