@@ -94,7 +94,7 @@ router.get("/albums", async (req, res) => {
             `https://api.deezer.com/artist/${artistId}/albums`
         );
         const responseArtist = await axios.get(
-            `http://localhost:3000/api/artistinfo?q=${artistId}`
+            `/api/artistinfo?q=${artistId}`
         );
 
         for (const album of response.data.data) {
