@@ -94,7 +94,7 @@ router.get("/albums", async (req, res) => {
             `https://api.deezer.com/artist/${artistId}/albums`
         );
         const responseArtist = await axios.get(
-            `/api/artistinfo?q=${artistId}`
+            `https://top-songs-api.vercel.app/api/artistinfo?q=${artistId}`
         );
 
         for (const album of response.data.data) {
